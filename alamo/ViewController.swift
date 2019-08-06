@@ -43,6 +43,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func pastebinButtonPressed(_ sender: Any) {
+        let url = "https://pastebin.com/api/api_post.php"
+        let apiKey = "5e8fc5f765ba88c3693d356d9c24cc16"
+        
+        let params = [
+            "api_dev_key" : apiKey,
+            "api_option" : "paste",
+            "api_paste_code" : pastebinTextField.text ?? "No text entered"
+        ]
+        
+        Alamofire.request(url, method: .post, parameters: params).responseString { (response) in
+            if response.result.isSuccess {
+                print("Find your pasted result @ \(response)")
+            } else {
+                print("pastebin post issues")
+            }
+        }
     }
     
 
