@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     @IBAction func getQuotePressed(_ sender: Any) {
         let url = "https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random"
-        let apiKey = "aaec687b9amsh23f3e3c98b99be3p109206jsn31495e2b36f2"
+        let apiKey = "YOUR_API_KEY_HERE"
         
         let header = ["X-RapidAPI-Key" : apiKey]
         
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     
     @IBAction func pastebinButtonPressed(_ sender: Any) {
         let url = "https://pastebin.com/api/api_post.php"
-        let apiKey = "5e8fc5f765ba88c3693d356d9c24cc16"
+        let apiKey = "YOUR_API_KEY_HERE"
         
         let params = [
             "api_dev_key" : apiKey,
